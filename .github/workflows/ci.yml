@@ -1,0 +1,52 @@
+# .github/workflows/main.yml
+
+on:
+  #push:
+    #branches: [ master ]
+
+jobs:
+  backfill-commits:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: bcanseco/github-contribution-graph-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_EMAIL: ozcanzaferayan@gmail.com
+        MAX_DAYS: 368
+        MIN_COMMITS_PER_DAY: 1
+        MAX_COMMITS_PER_DAY: 25
+    - uses: bcanseco/github-contribution-graph-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_EMAIL: ozcanzaferayan@gmail.com
+        MAX_DAYS: 298
+        MIN_COMMITS_PER_DAY: 1
+        MAX_COMMITS_PER_DAY: 25
+    - uses: bcanseco/github-contribution-graph-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_EMAIL: ozcanzaferayan@gmail.com
+        MAX_DAYS: 228
+        MIN_COMMITS_PER_DAY: 1
+        MAX_COMMITS_PER_DAY: 25
+    - uses: bcanseco/github-contribution-graph-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_EMAIL: ozcanzaferayan@gmail.com
+        MAX_DAYS: 158
+        MIN_COMMITS_PER_DAY: 1
+        MAX_COMMITS_PER_DAY: 25
+    - uses: bcanseco/github-contribution-graph-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_EMAIL: ozcanzaferayan@gmail.com
+        MAX_DAYS: 88
+        MIN_COMMITS_PER_DAY: 1
+        MAX_COMMITS_PER_DAY: 25
+    - uses: bcanseco/github-contribution-graph-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GIT_EMAIL: ozcanzaferayan@gmail.com
+        MAX_DAYS: 18
+        MIN_COMMITS_PER_DAY: 1
+        MAX_COMMITS_PER_DAY: 25
